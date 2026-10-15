@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Brand Jewelry</title>
+<style>
+:root{--bg:#faf7f2;--surface:#fff;--text:#2b2623;--muted:#7a6f66;--accent:#b08d57;--line:#e8e0d4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171412;--surface:#211d1a;--text:#f1ebe3;--muted:#a69b90;--accent:#d2ad74;--line:#352f2a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171412;--surface:#211d1a;--text:#f1ebe3;--muted:#a69b90;--accent:#d2ad74;--line:#352f2a;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman",serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 6vw;border-bottom:1px solid var(--line)}
+.logo{font-size:1.3rem;letter-spacing:.15em;text-transform:uppercase}
+nav{display:flex;gap:22px;font-family:system-ui,sans-serif;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+.hero{text-align:center;padding:12vh 6vw 10vh}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:400;margin:0 0 16px;line-height:1.15}
+.hero p{max-width:520px;margin:0 auto 28px;color:var(--muted);font-size:1.1rem}
+.btn{display:inline-block;padding:13px 30px;border:1px solid var(--accent);color:var(--accent);font-family:system-ui,sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;background:none;cursor:pointer}
+.btn:hover{background:var(--accent);color:var(--bg)}
+section{padding:8vh 6vw}
+h2{text-align:center;font-weight:400;font-size:2rem;margin:0 0 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.card{background:var(--surface);border:1px solid var(--line)}
+.ph{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.card:nth-child(1) .ph{background:linear-gradient(135deg,#e9d8b8,#c9a56a)}
+.card:nth-child(2) .ph{background:linear-gradient(135deg,#e6e1da,#b7b1a8)}
+.card:nth-child(3) .ph{background:linear-gradient(135deg,#f1d9d0,#d9a896)}
+.card:nth-child(4) .ph{background:linear-gradient(135deg,#d8e3dc,#9fb8a8)}
+.card:nth-child(5) .ph{background:linear-gradient(135deg,#e2d8ea,#b4a0c4)}
+.card:nth-child(6) .ph{background:linear-gradient(135deg,#f0e4c4,#d4b56a)}
+.info{padding:16px 18px 20px}
+.info h3{margin:0;font-weight:400;font-size:1.1rem}
+.info p{margin:4px 0 0;color:var(--muted);font-family:system-ui,sans-serif;font-size:.9rem}
+.buy{display:block;margin-top:12px;padding:9px;text-align:center;font-size:.75rem}
+.about{max-width:680px;margin:0 auto;text-align:center;color:var(--muted);font-size:1.1rem}
+form{max-width:480px;margin:0 auto;display:grid;gap:14px;font-family:system-ui,sans-serif}
+input,textarea{width:100%;padding:12px;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit}
+footer{text-align:center;padding:30px 6vw;color:var(--muted);font-family:system-ui,sans-serif;font-size:.8rem;border-top:1px solid var(--line)}
+@media(max-width:560px){header{flex-direction:column;gap:12px}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#top">Your Brand</a>
+<nav><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+
+<div class="hero" id="top">
+<h1>Handmade jewelry,<br>made to be worn daily</h1>
+<p>Small-batch pieces crafted with care. Replace this line with your story in one sentence.</p>
+<a class="btn" href="#shop">Shop the collection</a>
+</div>
+
+<section id="shop">
+<h2>The Collection</h2>
+<div class="grid">
+<div class="card"><div class="ph">💍</div><div class="info"><h3>Signet Ring</h3><p>$68</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_1">Buy now</a></div></div>
+<div class="card"><div class="ph">📿</div><div class="info"><h3>Layered Necklace</h3><p>$54</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_2">Buy now</a></div></div>
+<div class="card"><div class="ph">✨</div><div class="info"><h3>Pearl Drop Earrings</h3><p>$46</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_3">Buy now</a></div></div>
+<div class="card"><div class="ph">🔗</div><div class="info"><h3>Chain Bracelet</h3><p>$42</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_4">Buy now</a></div></div>
+<div class="card"><div class="ph">💎</div><div class="info"><h3>Gemstone Pendant</h3><p>$75</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_5">Buy now</a></div></div>
+<div class="card"><div class="ph">🌙</div><div class="info"><h3>Crescent Studs</h3><p>$32</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_6">Buy now</a></div></div>
+</div>
+</section>
+
+<section id="about">
+<h2>Our Story</h2>
+<p class="about">Tell visitors who makes the jewelry, what materials you use, and why you started. A few warm, honest sentences build more trust than anything else on the page.</p>
+</section>
+
+<section id="contact">
+<h2>Orders &amp; Custom Pieces</h2>
+<form onsubmit="event.preventDefault();var f=this;location.href='mailto:you@example.com?subject='+encodeURIComponent('Inquiry from '+f.n.value)+'&body='+encodeURIComponent(f.m.value)">
+<input name="n" placeholder="Your name" required>
+<textarea name="m" rows="4" placeholder="What are you looking for?" required></textarea>
+<button class="btn" type="submit">Send inquiry</button>
+</form>
+</section>
+
+<footer>© Your Brand · Instagram · Etsy · you@example.com</footer>
+</body>
+</html>
