@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>La Cajita </title>
+<title>La Cajita</title>
 <style>
 :root{--bg:#faf7f2;--surface:#fff;--text:#2b2623;--muted:#7a6f66;--accent:#b08d57;--line:#e8e0d4;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -25,52 +25,53 @@ nav a:hover{color:var(--accent)}
 section{padding:8vh 6vw}
 h2{text-align:center;font-weight:400;font-size:2rem;margin:0 0 36px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px;max-width:1100px;margin:0 auto}
-.card{background:var(--surface);border:1px solid var(--line)}
-.ph{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:3rem}
-.card:nth-child(1) .ph{background:linear-gradient(135deg,#e9d8b8,#c9a56a)}
-.card:nth-child(2) .ph{background:linear-gradient(135deg,#e6e1da,#b7b1a8)}
-.card:nth-child(3) .ph{background:linear-gradient(135deg,#f1d9d0,#d9a896)}
-.card:nth-child(4) .ph{background:linear-gradient(135deg,#d8e3dc,#9fb8a8)}
-.card:nth-child(5) .ph{background:linear-gradient(135deg,#e2d8ea,#b4a0c4)}
-.card:nth-child(6) .ph{background:linear-gradient(135deg,#f0e4c4,#d4b56a)}
+.card{background:var(--surface);border:1px solid var(--line);cursor:pointer;text-align:left;padding:0;color:inherit;font:inherit}
+.card:hover{border-color:var(--accent)}
+.ph{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .info{padding:16px 18px 20px}
 .info h3{margin:0;font-weight:400;font-size:1.1rem}
 .info p{margin:4px 0 0;color:var(--muted);font-family:system-ui,sans-serif;font-size:.9rem}
-.buy{display:block;margin-top:12px;padding:9px;text-align:center;font-size:.75rem}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.modal.open{display:flex}
+.sheet{background:var(--surface);color:var(--text);max-width:920px;width:100%;max-height:100%;overflow:auto;display:grid;grid-template-columns:1.1fr 1fr;border:1px solid var(--line);position:relative}
+.gal{padding:16px}
+.main{aspect-ratio:1;font-size:5rem}
+.thumbs{display:flex;gap:8px;margin-top:10px}
+.thumbs button{width:64px;height:64px;padding:0;border:2px solid transparent;cursor:pointer;position:relative;overflow:hidden;font-size:1.4rem;background:none}
+.thumbs button.on{border-color:var(--accent)}
+.side{padding:32px 28px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.side h3{margin:0;font-weight:400;font-size:1.7rem}
+.side .price{font-family:system-ui,sans-serif;color:var(--accent);font-size:1.2rem}
+.side p{margin:0;color:var(--muted);white-space:pre-line}
+.x{position:absolute;top:8px;right:12px;background:none;border:0;color:var(--text);font-size:2rem;cursor:pointer;line-height:1;z-index:2}
 .about{max-width:680px;margin:0 auto;text-align:center;color:var(--muted);font-size:1.1rem}
 form{max-width:480px;margin:0 auto;display:grid;gap:14px;font-family:system-ui,sans-serif}
 input,textarea{width:100%;padding:12px;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit}
 footer{text-align:center;padding:30px 6vw;color:var(--muted);font-family:system-ui,sans-serif;font-size:.8rem;border-top:1px solid var(--line)}
-@media(max-width:560px){header{flex-direction:column;gap:12px}}
+@media(max-width:700px){header{flex-direction:column;gap:12px}.sheet{grid-template-columns:1fr}.side{padding:8px 20px 28px}}
 </style>
 </head>
 <body>
 <header>
-<a class="logo" href="#top">Your Brand</a>
+<a class="logo" href="#top">La Cajita</a>
 <nav><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
 </header>
 
 <div class="hero" id="top">
-<h1>Handmade jewelry,<br>made to be worn daily</h1>
-<p>Small-batch pieces crafted with care. Replace this line with your story in one sentence.</p>
+<h1>Little Treasures<br>Handmade Pieces </h1>
+<p>Limited designs in 925 sterling silver and 18k gold, from jewelers and artists across Ecuador.</p>
 <a class="btn" href="#shop">Shop the collection</a>
 </div>
 
 <section id="shop">
 <h2>The Collection</h2>
-<div class="grid">
-<div class="card"><div class="ph">💍</div><div class="info"><h3>Signet Ring</h3><p>$68</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_1">Buy now</a></div></div>
-<div class="card"><div class="ph">📿</div><div class="info"><h3>Layered Necklace</h3><p>$54</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_2">Buy now</a></div></div>
-<div class="card"><div class="ph">✨</div><div class="info"><h3>Pearl Drop Earrings</h3><p>$46</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_3">Buy now</a></div></div>
-<div class="card"><div class="ph">🔗</div><div class="info"><h3>Chain Bracelet</h3><p>$42</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_4">Buy now</a></div></div>
-<div class="card"><div class="ph">💎</div><div class="info"><h3>Gemstone Pendant</h3><p>$75</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_5">Buy now</a></div></div>
-<div class="card"><div class="ph">🌙</div><div class="info"><h3>Crescent Studs</h3><p>$32</p><a class="btn buy" href="https://buy.stripe.com/REPLACE_6">Buy now</a></div></div>
-</div>
+<div class="grid" id="grid"></div>
 </section>
 
 <section id="about">
 <h2>Our Story</h2>
-<p class="about">Tell visitors who makes the jewelry, what materials you use, and why you started. A few warm, honest sentences build more trust than anything else on the page.</p>
+<p class="about">We are a small jewelry business based in Quito, Ecuador. We source our pieces from local jewelers who work with talented artists, using traditional techniques to create unique designs that tell a story. Occasionally, a special piece from Italy joins the collection too. Most of our pieces are limited designs crafted in 925 sterling silver and 18k gold.</p>
 </section>
 
 <section id="contact">
@@ -82,6 +83,42 @@ footer{text-align:center;padding:30px 6vw;color:var(--muted);font-family:system-
 </form>
 </section>
 
-<footer>© Your Brand · Instagram · Etsy · you@example.com</footer>
+<footer>© La Cajita Quito-Ecuador · lacajitaecu@gmail.com</footer>
+
+<div class="modal" id="modal" aria-hidden="true">
+<div class="sheet" role="dialog" aria-modal="true">
+<button class="x" id="close" aria-label="Close">&times;</button>
+<div class="gal"><div class="ph main" id="main"></div><div class="thumbs" id="thumbs"></div></div>
+<div class="side"><h3 id="mname"></h3><div class="price" id="mprice"></div><p id="mdesc"></p><a class="btn" id="mbuy" href="#">Buy now</a></div>
+</div>
+</div>
+
+<script>
+/* EDIT YOUR PRODUCTS HERE.
+   id    = photo file prefix: images/<id>-1.jpg, images/<id>-2.jpg, ...
+   count = how many photos that product has
+   link  = your Square / Stripe / Venmo payment link */
+var products=[
+{id:"star-bracelet",name:"Star Bracelet",price:"$42",emoji:"🔗",bg:"#d8e3dc,#9fb8a8",count:1,link:"#",desc:"A delicate chain bracelet adorned with an assortment of stars and circles, featuring an adjustable clasp for a comfortable fit. Each star is set with 10 natural stones that sparkle beautifully. Handcrafted in Ecuador.\n\nLength: 19.5 cm"},
+{id:"swan-bracelet",name:"Butterfly Swan Bracelet",price:"$42",emoji:"🔗",bg:"#d8e3dc,#9fb8a8",count:1,link:"#",desc:"An elegant chain bracelet adorned with four graceful swans and an adjustable clasp. Each swan features natural stones, with two pink stones for the eyes and six clear stones on each wing. Handcrafted in Italy.\n\nLength: 19.5 cm"},
+{id:"set",name:"Heart Earrings & Necklace Set",price:"$88",emoji:"💖",bg:"#f5e0e0,#d9a8a8",count:1,link:"#",desc:"A charming matching set featuring a rose encased in heart-shaped earrings and an accompanying pendant. A timeless design that adds a romantic touch to any look. Handcrafted in Ecuador.\n\nDimensions:\nPendant: 1.5 cm x 1 cm\nEarrings: 1 cm x 1 cm"}
+];
+var $=function(i){return document.getElementById(i)},cur=null,idx=0;
+function pic(p,n,box){box.style.background="linear-gradient(135deg,"+p.bg+")";box.textContent=p.emoji;
+var im=new Image();im.alt=p.name;im.loading="lazy";im.src="images/"+p.id+"-"+n+".jpg";im.onerror=function(){im.remove()};box.appendChild(im)}
+products.forEach(function(p,i){var b=document.createElement("button");b.className="card";
+b.innerHTML='<div class="ph"></div><div class="info"><h3></h3><p></p></div>';
+pic(p,1,b.querySelector(".ph"));b.querySelector("h3").textContent=p.name;b.querySelector("p").textContent=p.price;
+b.onclick=function(){openP(i)};$("grid").appendChild(b)});
+function show(n){idx=n;$("main").innerHTML="";pic(cur,n+1,$("main"));
+[].forEach.call($("thumbs").children,function(t,k){t.className=k===n?"on":""})}
+function openP(i){cur=products[i];$("mname").textContent=cur.name;$("mprice").textContent=cur.price;$("mdesc").textContent=cur.desc;$("mbuy").href=cur.link;
+$("thumbs").innerHTML="";for(var k=0;k<cur.count;k++){(function(k){var t=document.createElement("button");pic(cur,k+1,t);t.onclick=function(){show(k)};$("thumbs").appendChild(t)})(k)}
+show(0);$("modal").classList.add("open");$("modal").setAttribute("aria-hidden","false")}
+function closeP(){$("modal").classList.remove("open");$("modal").setAttribute("aria-hidden","true")}
+$("close").onclick=closeP;$("modal").onclick=function(e){if(e.target===this)closeP()};
+document.onkeydown=function(e){if(!cur||!$("modal").classList.contains("open"))return;
+if(e.key==="Escape")closeP();if(e.key==="ArrowRight")show((idx+1)%cur.count);if(e.key==="ArrowLeft")show((idx+cur.count-1)%cur.count)};
+</script>
 </body>
 </html>
